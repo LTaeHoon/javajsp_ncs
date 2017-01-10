@@ -1,0 +1,8 @@
+JSP/Servlet 수업계획 
+ - 선수과목 : 화면구현(HTML4/5, Javascript(jQuery)
+ 1. 작업환경 구축, DB 구축
+ 2. Jsp/Servlet 기본 문법
+ 3. DB 연동(커넥션 풀 환경)
+ 4. 모델1방식 - 게시판 시스템 구축 
+ 5. EL/JSTL - View page 구축
+ 6. 모델2방식 : MVC 프로젝트 구현
