@@ -6,9 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>login 화면 </title>
 </head>
+
 <body>
   <h2> 사용자 로그인 화면</h2>
-  <p align="right">
+  <p align="left">
      <img src="../images/login.jpg" width="350"/>
   </p>
    <!--  action="http://192.168.0.26:8080/chap01_JspServlet/LoginServlet" -->
