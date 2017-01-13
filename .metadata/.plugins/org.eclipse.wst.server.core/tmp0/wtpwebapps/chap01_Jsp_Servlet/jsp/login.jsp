@@ -25,8 +25,8 @@
 <body>
 <!-- action="http://192.168.0.79:8282/chap01_Jsp_Servlet/LoginServlet" -->
 	<form name="frm" method="post" 
-	  action="../LoginServlet"
-	  onsubmit="return data_check()">
+	  action="<%=request.getContextPath() %>/LoginServlet" 
+	  onsubmit="return data_check()"> <!-- 절대 경로 -->
 	  <!-- 
 	  	method : 데이터 전송방식(get/post) -> doGet()/doPost()
 	  	action : 서버페이지 url 
