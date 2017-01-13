@@ -27,3 +27,20 @@
  <a href="sessionOut.jsp">로그아웃</a>
  
  
+ <!-- 
+ 	내장객체에서 공통으로 사용되는 method
+ 	- 내장객체 : request, session, application
+ 	- 공통 method 
+ 	1) setAttribute("key",value);  // key 생성
+ 	2) getAttribute("key");  // key 획득
+ 	3) removeAttribute("key");  // key 제거
+ 	
+ 	- 내장객체별 key 사용범위
+ 	1) request : 포워딩된 페이지에서 사용
+ 		-> 페이지 단위
+ 	2) session : 동일한 브라우저에서 생성된 모든 페이지 사용
+ 		-> user 구분 용도 : 브라우저 단위
+ 	3) application : 응용 프로그램에서 생성된 모든 페이지 사용
+ 		-> 채팅 창 구현 용도 : 서로 다른 브라우저 (서로 다른 어플리케이션)
+  -->
+ 
