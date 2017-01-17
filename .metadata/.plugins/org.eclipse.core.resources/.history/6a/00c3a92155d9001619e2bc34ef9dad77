@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+  <!--  loginForm.jsp -> agreement.jsp(session key 생성) -> join.jsp 
+  	1. 파라미터 받기
+  	2. session key 이용 : id, name 출력
+  	3. 동의 여부 -> 동의 : "회원가입 성공"
+  				->비동의 : "회원가입 실패"
+  -->
+<%
+	request.setCharacterEncoding("UTF-8");
+	String agree = request.getParameter("agree");
+	String image = request.getParameter("image");
+	
+
+%>	  

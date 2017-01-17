@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+/* style.css 파일 */
+/*  로그인 영역 */
+#login {
+	float:right;   /* 오른쪽으로 배치 */
+	margin:-20px 20px 0 0;
+	font-family: 맑은 고딕, Arial;
+	font-size: 12px;
+	word-spacing: 5px;   /* 자간 */
+	font-style : bole;	
+	text-shadow:1px 2px 2px #666;
+}
+#login a {   /* a 태그 디자인 */
+	text-decoration:none;  /* 밑줄 제거 */
+	color: #333;
+}
+#login a:hover { /* 마우스 오버 시 */
+	color: #F90;	 
+}
+
+body{ /* 문서 전체 디자인 적용 */
+  font : 14px 맑은 고딕;   /* 글꼴 크기, 서체 */
+}
+a img{ /* 이미지 태그 */
+	border : none;  /* 이미지 외곽선 제거 */	
+}
+a:link{  /* a 태그 - 최초 상태 */
+	text-decoration: none; /* 장식 제거 */
+}
+a:visited{  /* a 태그 - 사이트 방문 상태 */
+	text-decoration: none;
+}
+a:hover{  /* a 태그 - 마우스 포인터를 올린 경우 */
+	text-decoration: underline; /* 마우스 오버시 밑줄 생성 */
+}
+.container{ /* div 태그 관련 디자인 */
+	width : 950px;         /* 문서 전체 폭 픽셀 */
+	margin : 0 auto;   
+	background-color:#fff; /* 배경색 */
+	border: 1px solid #e8e2ae  /* 외곽선(테두리) */
+}
+/* header 영역 디자인 */
+header{  /* 머리말 디자인 */
+   height: 208px;
+   margin-top: 0px;   
+   background-image: url("../images/bg.jpg"); /* 헤더 영역에 이미지를 배경으로 */ 
+   background-repeat : no-repeat;  /* 이미지 반복 없음 */
+   background-position: left top; /* 이미지 위치 */
+}
+header hgroup{   /* 헤더 영역의 hgroup 태그 영역 */
+	position:relative;   
+	top : 60px;     /* hgroup 태그의 위치 지정 */
+	left : 180px;
+}
+header h1{ /* 헤더 영역의 주 제목 */
+	font-size : 2em;   /* 현재 글자의 2배 크기 */
+	color : #F2CB78;  /* 글자색 */
+	text-shadow: 1px 2px 2px #000;  /* 그림자 색 지정 */
+}
+header h2{ /* 헤더 영역의 부 제목 */
+	font-size : 2em;   /* 현재 글자의 2배 크기 */
+	color : #e18048;  /* 글자색 */
+	text-shadow: 0px 1px 1px #000;  /* 그림자 색 지정 */
+}
+/* 내비게이션 영역 */
+.nav{  /* 내비게이션 영역 */
+   background: #C07F5A;  /* 내비게이션 영역의 배경색 */
+   margin-top: -15px; /* 상단 여백 - 음수값은 위쪽으로 올라감 */
+   width: 950px;   /* 폭(넓이) */
+   height: 50px;   /* 높이 */	
+}
+.nav ul{ /* 내비게이션에서 ul 태그 */
+   list-style : none; /* 목록 스타일 제거(점 제거됨) */
+   height: 40px;
+   padding-top:10px;
+}
+.nav ul li{ /* 내비게이션에서 ul li 태그 */
+	float : left;  /* 수직 메뉴를 수평 메뉴로 변경 */
+	font-size: 17px; 
+}
+.nav a{ /* 내비게이션에서 a 태그 */    
+	padding: 10px 120px 5px 60px; /* 위, 오른, 아래, 왼쪽 */
+	color: #fff;
+	text-decoration: none; /* a태그의 밑줄 제거 */
+}
+.nav a:visited{  /* 내비게이션 a 태그 방문 시 */
+	color:#fff;
+}
+.nav a:hover, .nav a:active, .nav a:focus{ /* 마우스 오버, 클릭, 포커스 */
+	text-shadow: 0px 2px 2px #000;  /* 그림자 지정 */
+	color: #FC0;   /* 글자색 */
+}
+/* section 영역 디자인 */
+.content{
+	background-color : #ffffff;
+	padding-top : 5px;     /* 상단 안쪽 여백 */
+	padding-left : 10px;   /* 왼쪽 안쪽 여백 */
+	width : 720px;     /* section영역 폭 지정 */
+	float : left;  /* 왼쪽에서 오른쪽으로 정렬(aside내용이 오른쪽 위치함) */
+}
+.content article p{	
+	text-align:justify;  /* 양쪽 균등배열 텍스트 정렬 방식 */
+}
+/* aside - 보조내용 디자인 */
+.sidebar{
+	float : right;   /* 오른쪽에 위치시킴 */
+	width : 200px; height : 480px; /* 폭과 넓이 지정 */
+	background-color : #E4DA7E;  /* 배경색 지정 */
+	padding-top : 20px;  /* 상단 안쪽 여백 */
+	padding-left : 10px;  /* 왼쪽 안쪽 여백 */
+	padding-right : 10px;  /* 오른쪽 안쪽 여백 */
+}
+.sidebar img{ /* 보조내용의 이미지 디자인 */
+   margin-left : 30px;      /* 왼쪽 바깥쪽 여백 */
+   border : 1px solid #ccc;  /* 이미지 테두리 지정 */
+   opacity : 0.5;   /* 불투명도 - 흐린 상태 */
+   text-align : center: /* 텍스트 가운데 정렬 */
+}
+.sidebar img:hover{ /* 이미지 마우스 오버 시 */   
+   border : 1px solid #000;  /* 이미지 테두리 지정 */
+   opacity : 1;   /* 불투명도 - 가장 선명한 상태 상태 */
+}
+/* footer 영역 디자인 */
+footer{
+	padding : 5px 0;  /* 위쪽, 오른쪽 여백 */
+	background-color : #997000;
+	color : #fff;     /* 글자색 */
+	text-align : center;  /* 글자 가운데 정렬 */
+	clear : both;  /* float : left 기능 제거 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

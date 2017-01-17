@@ -1,0 +1,16 @@
+<%@page import="javax.swing.JOptionPane"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- ifExam.jsp -->
+
+<%! //class 멤버 선언
+	int size; //게시물 수
+	String writer; //게시자
+	
+	public void input(){ //size, writer 초기화
+		size = Integer.parseInt(
+		JOptionPane.showInputDialog("게시물 수 입력"))s;
+		
+	}
+
+%>

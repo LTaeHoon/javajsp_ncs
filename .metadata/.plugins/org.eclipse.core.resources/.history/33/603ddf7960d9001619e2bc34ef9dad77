@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+
+	String car[] = request.getParameterValues("car");
+	String id = (String)session.getAttribute("id");
+	String name= (String)session.getAttribute("name");
+
+%>
+
+<table>
+	<tr>
+		<th colspan="2"><h3><%=id %>님의 장바구니 내역</h3></th>
+	</tr>			
+	<tr>
+		<td>선택상품</td>
+		<td>상품설명</td>
+	</tr>
+	<%
+	for(int i=0;i<car.length;i++){
+		%>
+	<tr>
+		<td><img src="<%=car[i]%>></img></td>
+	</tr>
+		<% 
+	}
+	%>
+	
+</table>

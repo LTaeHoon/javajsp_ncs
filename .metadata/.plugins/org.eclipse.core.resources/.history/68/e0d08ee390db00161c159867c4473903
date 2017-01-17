@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+    <!--  cookie vs session
+    	1. 사용자 정보가 사용자 컴퓨터에 저장
+    		->cf) 사용자 정보가 서버에 저장
+    	2. 1개 객체에 1개 속성 저장
+    		->cf) 객체 생성 없음, 다수 속성 저장
+     -->

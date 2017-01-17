@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+#login_wrap{
+	width:250px;
+	height:200px;
+	/*가운데 정렬*/
+	margin-left: auto;margin-right: auto;
+	margin-top: 20px;
+	border: 1px solid blue;
+	/*css3 추가 기능 */
+	border-radius:20px; /*테두리 둥글게 : 사각형 모서리 라운딩*/
+	box-shadow: 15px 15px 15px skyblue; /*박스 그림자 - 길이, 방향, 투명도, 색상*/
+}
+.login_title{
+	margin-top:20px;
+	width:150px;
+	margin-left: auto;margin-right: auto;
+	background-color: skyblue;
+	border-radius: 15px;
+	text-align:center;
+	font-size:20px;
+}
+#login_t{
+	margin:30px 0 0 20px; /*위부터 시작해서 시계방향 순서 (위 오른쪽 아래 왼쪽)*/ 
+}
+#login_btn{
+	margin:20px 0 0 120px;
+}
+.login_b:hover{
+	cursor: pointer;
+	background-color: skyblue;
+	/*border:1px solid red;*/
+	/*border-radius: 15px;*/
+	font-weight: bold;
+}
+.input_box:hover{
+	cursor: pointer;
+	background-color: #cecece; /*회색*/
+	/*border:1px solid red;*/
+	border-radius: 15px;
+}

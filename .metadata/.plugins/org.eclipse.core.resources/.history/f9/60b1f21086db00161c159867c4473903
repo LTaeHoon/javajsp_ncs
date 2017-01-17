@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+    <!-- loginForm.jsp(1개) -> selProduct.jsp -->
+    
+    <%
+    	request.setCharacterEncoding("UTF-8");
+    	String userName = request.getParameter("userName");
+    	//세션 키 생성 : key(String), value(Object)
+    	session.setAttribute("userName", userName);
+    	String userName2 = (String)session.getAttribute("userName");
+    %>

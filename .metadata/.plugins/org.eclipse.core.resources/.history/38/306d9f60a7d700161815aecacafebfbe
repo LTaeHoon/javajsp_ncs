@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!--  dbsearch.jsp  -->
+<h2>db 테이블 조회 페이지</h2>
+
+<%
+	// 1. id/pwd 변수 받기
+	String id = request.getParameter("id");
+	String pwd = request.getParameter("pwd");
+	
+	// 2. db 연동 - con
+	
+	String sql = null;
+	
+%>

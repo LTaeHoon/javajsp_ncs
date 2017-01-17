@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+   
+	<!-- includeTest.jsp(2) -> includeResult.jsp <-> includePage.jsp -->
+	
+	<%
+		request.setCharacterEncoding("UTF-8");
+		String name = request.getParameter("name");
+		String pageName = request.getParameter("pageName");
+		
+	%>
+
+	<h2> 포함하는 페이지 : includeResult.jsp </h2>
+	<h2> 포함되는 페이지 : includePage.jsp </h2>
+	
+	<hr>
+		<jsp:include page="<%=pageName %>" flush="true"/>
+	<hr>
+	
+	<!-- 리턴해서 실행되는 영역 -->
+	<h2> 리턴후 실행되는 영역 </h2>
+	

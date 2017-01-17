@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- digitInput.jsp -> digitCalc.jsp -->
+
+<%
+	int num1 = Integer.parseInt(request.getParameter("num1"));
+	int num2 = Integer.parseInt(request.getParameter("num2"));
+	
+	/* 두 수 대상 사칙연산 */
+	request.setAttribute("add", num1+num2);
+	request.setAttribute("sub", num1-num2);
+	request.setAttribute("mul", num1*num2);
+	request.setAttribute("div", num1/num2);
+	
+%>

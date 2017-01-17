@@ -1,0 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- loginForm.jsp(id/pwd) -> sessionPro.jsp -->
+    
+<!-- 
+	session 내장객체
+	- 서버에서 사용자를 구분할 수 있는 key를 생성하는 역할
+ -->
