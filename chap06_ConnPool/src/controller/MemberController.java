@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.xml.ws.Response;
 
 import model.MemberDAO;
 import model.MemberDTO;
@@ -54,15 +54,21 @@ public class MemberController extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		//브라우져 출력
 		PrintWriter out = response.getWriter();
+		
 		if(result){
 			out.println("<script>");
 			out.println("alert('회원가입 성공')");
+			out.println("location.href='"+request.getContextPath()+"/member_ver2/loginForm.jsp'");
 			out.println("</script>");
-			System.out.println("회원가입 성공");
-			RequestDispatcher rd = 
+			
+			//아래 이동 방법1,2 사용시 스크립트 동장 안함
+			//페이지 이동 방법1
+			//response.sendRedirect("./member_ver2/loginForm.jsp");
+			//페이지 이동방법2
+			/*RequestDispatcher rd = 
 				request.getRequestDispatcher("./member/loginForm.jsp");
 				rd.forward(request,response); //view page 이동
-		}else{
+*/		}else{
 			RequestDispatcher rd = 
 				request.getRequestDispatcher("./member/joinForm.jsp");
 				rd.forward(request,response); //view page 이동
