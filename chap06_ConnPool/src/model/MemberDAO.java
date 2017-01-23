@@ -55,4 +55,21 @@ public class MemberDAO {
 		   return result;
 	   }//insert end
 	   
+	   /*중복 아이디 체크 method*/
+	   public int idCheck(String id){
+		   int re=-1;
+		   sql = "select * from jsp_member2 where id=?";
+		   try{
+			   pstmt = con.prepareStatement(sql);
+			   pstmt.setString(1, id);
+			   rs=pstmt.executeQuery();
+			   if(rs.next()){
+				   re =1; 
+			   }
+			rs.close();pstmt.close();con.close();
+		   }catch(Exception e){
+			   e.printStackTrace();
+		   }
+		   return re; // 중복 아이디 : re =1
+	   }
 }
