@@ -1,12 +1,12 @@
 package model;
 
 public class MemberDTO {
-	String id;
-	String password;
-	String name;
-	String jumin1;
-	String jumin2;
-	String email;
+	private String id;
+	private String password;
+	private String name;
+	private String jumin1;
+	private String jumin2;
+	private String email;
 	
 	public String getId() {
 		return id;
