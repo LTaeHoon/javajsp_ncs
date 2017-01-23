@@ -1,0 +1,9 @@
+package login;
+
+/*
+ * java bean : DB테이블의 칼럼과 관련있는 클래스
+ * 구성요소 : 멤버변수(private), Setter/Getter
+ */
+public class LoginBean {
+	private String id
+}

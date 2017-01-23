@@ -1,0 +1,58 @@
+package model;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import db.DBConnection;
+
+public class MemberDAO {
+	   Connection con = null;
+	   PreparedStatement pstmt = null;
+	   ResultSet rs = null;
+	   String sql = null;
+	   
+	   public MemberDAO(){
+		   try {
+			DBConnection db = new DBConnection();
+			con = db.con;
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		   
+	   }
+	   
+	   public boolean insert(MemberDTO dto){
+		   boolean result=false;
+		   System.out.println("이쪽으로 오니?");
+		   System.out.printf("%s %s %s",id,passwd,name);
+		   sql = "insert into jsp_member2 values(?,?,?,?,?,?)";
+		   try {
+			pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, passwd);
+			pstmt.setString(3, name);
+			pstmt.setString(4, jumin1);
+			pstmt.setString(5, jumin2);
+			pstmt.setString(6, email);
+			
+			int re =pstmt.executeUpdate();
+			if(re>=1){
+				result = true;
+			}else{
+				result =  false;
+			}
+		   pstmt.close();con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		   System.out.println(result);
+		   return result;
+	   }//insert end
+	   
+}

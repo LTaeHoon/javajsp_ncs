@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+  <jsp:useBean id="join" class="join.JoinBean"/>
+  <jsp:setProperty property="*" name="join"/>
+  <%
+  	String userId = request.getParameter("userId");
+  	session.setAttribute("userId",userId);
+   	if(join.check()){
+   		%>
+   		<table>
+   			<tr>
+   				<th colspan="2"><h2>로그인 결과 화면</h2></th>
+   			</tr>
+   			<tr>
+   				<th colspan="2"><h3><%=session.getAttribute("userId") %>님이 로그인 하셨습니다.<input type="button" value="로그아웃" href="joinOut.jsp"/></h3></th>
+   			</tr>
+   		
+   		</table>
+   		
+   		<%
+   	}else{
+   		
+   	}
+  
+  %>

@@ -1,0 +1,82 @@
+package controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.ProductBean;
+
+/**
+ * Servlet implementation class ProductController
+ */
+@WebServlet("/ProductController")
+public class ProductController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ProductController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+		String sabun = request.getParameter("sabun");
+		String saname = request.getParameter("saname");
+		String procode = request.getParameter("procode");
+		String proname = request.getParameter("proname");
+		int price = Integer.parseInt(request.getParameter("price"));
+		ProductBean pro = new ProductBean();
+		pro.setSabun(sabun);
+		pro.setSaname(saname);
+		
+		System.out.println("product controller 구간");
+		HttpSession session = request.getSession();
+		PrintWriter out = response.getWriter();
+		String result="";
+		if(pro.check()){
+			result ="로그인 성공";
+			//사번과 이름이 일치하는 경우
+			pro.setProcode(procode);
+			pro.setProname(proname);
+			pro.setPrice(price);
+			System.out.println("로그인 성공 과정");
+			/*session.setAttribute("procode",pro.getProcode());
+			session.setAttribute("proname",pro.getProname());
+			session.setAttribute("price",pro.getPrice());
+			*/
+			session.setAttribute("result",result);
+		}else{
+			result="로그인 실패";
+			session.setAttribute("result", pro.check());
+			out.println("<script>");
+			out.println("alert('로그인 정보가 틀립니다.')");
+			out.println("history.back()"); //이전 페이지 이동
+			out.println("</script>");
+		}
+		RequestDispatcher rd = request.getRequestDispatcher("/view/ProductOutput.jsp");
+		rd.forward(request, response); //실제 페이지로 포워딩
+	}
+
+}

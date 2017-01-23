@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+
+.board_wrap{
+	width: 960px;
+	box-shadow: 0 0 5px #333;
+}
+
+/* FORM ELEMENTS */
+
+button, input, textarea, select {
+	text-align: left;
+	cursor: pointer;
+	/*text-transform: uppercase;*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+textarea {
+	font: 13px/1.5 'Helvetica Neue', Arial;
+}
+
+#banner-wrap button, #banner-wrap .button {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+input[type=text] { width: 117px; }
+
+footer input[type=text] { margin-right: 10px; }
+
+.grid_8 button, #main button { 
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+ }
+
+button, .button {
+	border: none;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	background: #f6bc60 url(../img/buttonBg.png) repeat-x 10px;
+	text-shadow: 0 -1px 0 #d09944;
+	padding: 10px 20px;
+	margin-right: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	*text-align: center; 
+	*padding: 5px 0px; 
+}
+
+
+input, textarea, select {
+	background: #f8eedf;
+	border: 1px solid #d9d9d9;
+	padding: 10px;
+	color: #247184;
+	margin-bottom: 15px;
+}
+
+input:hover, textarea:hover, button:hover, select:hover,
+input:focus, textarea:focus, button:focus, select:focus {
+	-webkit-box-shadow: 0 0 2px #061b20;
+	-moz-box-shadow: 0 0 5px #061b20;
+	-o-box-shadow: 0 0 5px #061b20;
+	box-shadow: 0 0 2px #061b20;
+	background: #eddbc0;
+}
+
+button:hover, .button:hover {
+	background: #eaa945 url(../img/buttonBg.png) repeat;
+}
+
+/* TABLE */
+.table{
+	overflow-x: scroll;
+}
+
+.table input[type=text]{
+	width: 25px;
+	text-align: center;
+}
+
+.spanTable input[type=text]{
+	width: 90%;
+	text-align: left;
+}
+
+table{
+	/* width: 960px; */
+}
+
+.table th:FIRST-CHILD{
+	width: 240px !important;
+}

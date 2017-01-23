@@ -1,0 +1,11 @@
+-- table.sql
+
+create table member1(
+id varchar(25) primary key,
+passwd varchar(25) not null,
+name varchar(30) not null,
+reg_date date
+);
+
+insert into member1 value('hong','1234','홍길동',sysdate);
+insert into member1 value('yoo','3456','윤아',sysdate);

@@ -1,0 +1,41 @@
+<%@page import="model.CRUD_DTO"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+ <!-- SelectPage.jsp : 서블릿에서 보낸 list 키 받기 -->
+ 
+ <%
+ 	List<CRUD_DTO> list = (List<CRUD_DTO>)request.getAttribute("list");
+ 	
+ %>
+ 	<div align="center">
+ 		<h2> member1 전체 테이블 목록 </h2>
+ 		<table>
+ 			<tr> <!-- 제목 행 출력 -->
+ 				<th> id </th>
+ 				<th> pwd </th>
+ 				<th> name </th>
+ 				<th> date </th>
+			</tr>
+			<%
+				if(list!=null){ //레코드가 있는 경우
+					for(int i=0;i<list.size();i++){ //레코드 수 반복
+						CRUD_DTO dto = list.get(i); 레코드 받기
+					}
+				}else{
+					%>
+					<tr>
+						<th colspan="4">
+							<h3> 목록이 없습니다.</h3>
+						</th>
+					</tr>
+					<% 
+				}
+				
+			
+			%>
+ 		
+ 		
+ 		</table>
+ 	</div>

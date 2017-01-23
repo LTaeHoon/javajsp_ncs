@@ -1,0 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!-- loginPro.jsp 
+	 LoginBean login = new LoginBean(); -->
+<jsp:useBean id="login" class="login.LoginBean"/>
+<!-- id : 참조변수, class : 객체 생성 하고자 하는 클래스 -->

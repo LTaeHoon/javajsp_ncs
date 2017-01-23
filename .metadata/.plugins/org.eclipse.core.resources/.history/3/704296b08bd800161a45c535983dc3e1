@@ -1,9 +1,0 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!--  jsp 지시어?
-	- 웹 컨테이너(Tomcat)에게 정보를 지시하는 역할
-	형식) <%--  --%><%@ 지시어 %> --%>
-	
-
-
- -->

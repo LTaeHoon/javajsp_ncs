@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;chap06_ConnPool/src/db/DBConnection (1).java&apos; to &apos;DBConnection.java&apos;" description="Rename resource &apos;DBConnection (1).java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/db/DBConnection (1).java" name="DBConnection.java" stamp="1484883290386" updateReferences="true"/>
+</session>

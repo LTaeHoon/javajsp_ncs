@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;chap03_ActionTag/WebContent/err/505code.jsp&apos; to &apos;500code.jsp&apos;" description="Rename resource &apos;505code.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/err/505code.jsp" name="500code.jsp" stamp="1484621200735" updateReferences="true"/>
+</session>

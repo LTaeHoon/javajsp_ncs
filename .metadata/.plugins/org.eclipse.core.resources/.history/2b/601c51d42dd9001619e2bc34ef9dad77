@@ -1,8 +1,0 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-    <!-- 내장객체
-    	- 객체 생성 없이 바로 사용할 수 있는 jsp 객체를 의미
-    	- 종류 : request(요청), response(응답), application(응용), out(출력),
-    			session(사용자 구분)
-     -->

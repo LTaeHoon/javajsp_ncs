@@ -1,0 +1,13 @@
+package model;
+
+//CRUD : Create,Read,Update,Delete
+/*
+ * DTO : 데이터 전송 객체 생성: table의 칼럼과 대응되는 객체 생성
+ */
+public class CRUD_DTO {
+	private String id;
+	private String passwd;
+	private String name;
+	private String reg_date;
+	
+}

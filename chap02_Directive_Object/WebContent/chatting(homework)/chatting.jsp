@@ -12,7 +12,7 @@
 	// 현재시간 구하기
 	Date date = new Date();
 	SimpleDateFormat f =
-		new SimpleDateFormat("E yyyy MMM dd HH:mm:ss", Locale.KOREA);
+		new SimpleDateFormat("yyyy MMM dd HH:mm:ss", Locale.KOREA);
 	
 	// ArrayList 객체 생성
 	ArrayList<String> list = 

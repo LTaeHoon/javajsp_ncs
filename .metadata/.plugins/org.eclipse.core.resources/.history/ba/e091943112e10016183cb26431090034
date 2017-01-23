@@ -1,0 +1,85 @@
+package controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+import model.MemberDAO;
+
+/**
+ * Servlet implementation class MemberController
+ */
+@WebServlet("/join.do")
+public class MemberController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public MemberController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		MemberDAO dao = new MemberDAO();
+		request.setCharacterEncoding("UTF-8");
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		String name = request.getParameter("name");
+		String jumin1 = request.getParameter("jumin1");
+		String jumin2 = request.getParameter("jumin2");
+		String email1 = request.getParameter("email1");
+		String email2 = request.getParameter("email2");
+		String email = email1+'@'+email2;
+
+		boolean result=dao.insert(id,pass,name,jumin1,jumin2,email);
+		request.setAttribute("result", result);
+		response.setContentType("text/html;charset=UTF-8");
+		//브라우져 출력
+		PrintWriter out = response.getWriter();
+		if(result){
+		out.println("<script>");
+		out.println("alert('회원가입 성공')");
+		out.println("</script>");
+		System.out.println("회원가입 성공");
+		RequestDispatcher rd = 
+				request.getRequestDispatcher("./member/loginForm.jsp");
+				rd.forward(request,response); //view page 이동
+		}else{
+		RequestDispatcher rd = 
+				request.getRequestDispatcher("./member/joinForm.jsp");
+				rd.forward(request,response); //view page 이동
+			
+		}
+		
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

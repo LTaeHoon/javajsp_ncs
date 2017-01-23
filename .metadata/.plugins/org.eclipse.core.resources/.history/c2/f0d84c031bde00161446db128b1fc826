@@ -1,0 +1,28 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- InsertForm.jsp(3개:id,passwd,name) -> InsertPro.jsp:DB 저장-->
+
+<%
+	boolean result = (boolean)request.getAttribute("result");
+	
+%>
+      if(re >= 1){
+    	  out.println("레코드 삽입 성공!!");
+    	  %>
+    	  	<br>
+    	     <!-- 
+    	     <a href="SelectTest.jsp">[테이블 목록 보기]</a> -->
+    	     <a href="SelectTest.jsp?id=<%=id%>&name=<%=name%>">목록</a>
+    	  <%
+      }else{
+    	  out.println("레코드 삽입 실패!!");
+      }
+      // open 객체 닫기   
+      pstmt.close(); con.close();   
+  }catch(Exception e){
+	  e.printStackTrace();
+	  out.println("DB 연결에 실패하였습니다.");
+  }
+%>
+
