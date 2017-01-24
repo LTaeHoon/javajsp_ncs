@@ -13,7 +13,9 @@
 	dao.board_hit(no); //조회수 증가
 	
 %>
-
+<form name="update" action="<%=request.getContextPath()%>/update.do"
+	  method="post">
+	  <input type="hidden" name="board_no" value="<%=dto.getBoard_no()%>"/>
 <table border="1" align=center>
 	
 	<%
@@ -22,7 +24,8 @@
 			<tr>
 				<th>작성자</th> 
 				<td>
-					<input name="board_name" value="<%=dto.getBoard_name() %>"/>
+					<!-- 읽기 전용 -->
+					<input name="board_name" value="<%=dto.getBoard_name() %>" readonly="readonly"/>
 				</td>
 			</tr>
 			<tr>
@@ -33,7 +36,7 @@
 			</tr>
 			<tr>
 				<th>글내용</th>
-				<td><textarea rows="5" cols="40"><%=dto.getBoard_name() %></textarea></td>
+				<td><textarea rows="5" cols="40" name="board_cont"><%=dto.getBoard_cont() %></textarea></td>
 			</tr>
 			
 			<% 
@@ -43,9 +46,8 @@
 	<tr>
 		<th colspan="2">
 			<a href="boardList.jsp">목록</a>
-			<a href="boardUpdate.jsp">수정</a>
-			<a href="boardDelete.jsp">삭제</a>
+			<a href="javascript:update.submit()" >수정</a>
+			<a href="boardDelete.jsp?no=<%=no%>" onclick="return confirm('삭제하시겠습니까')">삭제</a>
 	</tr>
-	
-
 </table>
+</form>
