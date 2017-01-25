@@ -105,3 +105,13 @@
 0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:34:27 +0900] "GET /chap10_Rtest/rjava.do HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:34:27 +0900] "GET /chap10_Rtest/view/result.jsp?num=304 HTTP/1.1" 200 607
 0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:34:27 +0900] "GET /chap10_Rtest/view/rnorm.jpg HTTP/1.1" 200 20445
+127.0.0.1 - - [25/Jan/2017:16:51:25 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:26 +0900] "GET /chap10_Rtest/view/start.jsp HTTP/1.1" 200 104
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:26 +0900] "GET /chap10_Rtest/rjava.do HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:30 +0900] "GET /chap10_Rtest/view/frontPage.jsp?num=304 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:30 +0900] "GET /chap10_Rtest/view/view/result.jsp?num=304 HTTP/1.1" 404 1060
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:49 +0900] "GET /chap10_Rtest/view/start.jsp HTTP/1.1" 200 104
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:49 +0900] "GET /chap10_Rtest/rjava.do HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:52 +0900] "GET /chap10_Rtest/view/frontPage.jsp?num=304 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:52 +0900] "GET /chap10_Rtest/view/result.jsp?num=304 HTTP/1.1" 200 607
+0:0:0:0:0:0:0:1 - - [25/Jan/2017:16:51:53 +0900] "GET /chap10_Rtest/view/rnorm.jpg HTTP/1.1" 200 21039

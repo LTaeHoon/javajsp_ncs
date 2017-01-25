@@ -42,7 +42,7 @@ public class RjavaController extends HttpServlet {
 			rcon.eval("barplot(rnorm(20,mean=0,sd=1),col=rainbow(20))");
 			rcon.eval("title('rnorm result chart')");
 			rcon.eval("dev.off()");
-			response.sendRedirect("view/frontPage.jsp?num="+num_x);
+			response.sendRedirect("view/result.jsp?num="+num_x);
 		} catch (RserveException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
