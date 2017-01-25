@@ -1,0 +1,56 @@
+package R;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.rosuda.REngine.REXP;
+import org.rosuda.REngine.REXPMismatchException;
+import org.rosuda.REngine.Rserve.RConnection;
+import org.rosuda.REngine.Rserve.RserveException;
+
+/**
+ * Servlet implementation class RjavaController
+ */
+@WebServlet("/rjava.do")
+public class RjavaController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public RjavaController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		RConnection rcon;
+		try {
+			rcon = new RConnection();
+			REXP x = rcon.eval("104+200");
+			int num_x = x.asInteger();
+			rcon.eval("setwd('C:/NCS/jsp/workspace(jsp)/chap10_Rtest/WebContent/view')");
+			rcon.eval("jpeg('rnorm.jpg',width=720,height=450)");
+			rcon.eval("barplot(rnorm(20,mean=0,sd=1),col=rainbow(20))");
+			rcon.eval("title('rnorm result chart')");
+			rcon.eval("dev.off()");
+			response.sendRedirect("view/result.jsp?num="+num_x);
+		} catch (RserveException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (REXPMismatchException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.board.model;
+
+public class BoardDTO {
+	private int board_no;
+	Stringboard_name varchar(25) not null,
+	board_title varchar(50) not null,
+	board_cont varchar(2000),
+	board_pwd varchar(25) not null,
+	board_hit number default 0,
+	board_regdate date		
+}

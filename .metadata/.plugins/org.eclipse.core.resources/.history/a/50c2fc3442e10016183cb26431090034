@@ -1,0 +1,12 @@
+<%@page import="com.board.model.BoardDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- boardList.jsp(no) -> boardCont.jsp -->
+
+<%
+	int no = Integer.parseInt(request.getParameter("no")); //게시물 번호
+	BoardDAO dao = new BoardDAO();
+	dao.board_cont(no);
+	
+	
+%>

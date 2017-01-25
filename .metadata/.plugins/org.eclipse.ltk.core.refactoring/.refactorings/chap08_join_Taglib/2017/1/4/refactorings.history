@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;chap08_join_Taglib/WebContent/JSTL/JSTL.jsp&apos; to &apos;JSTL01.jsp&apos;" description="Rename resource &apos;JSTL.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/JSTL/JSTL.jsp" name="JSTL01.jsp" stamp="1485241551492" updateReferences="true"/>
+</session>

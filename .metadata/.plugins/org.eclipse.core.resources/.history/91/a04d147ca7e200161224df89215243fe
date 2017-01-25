@@ -1,0 +1,15 @@
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!--fileUploadForm.jsp(writer,fileType,fileName)->fileUploadOut.jsp -->
+
+<%
+	request.setCharacterEncoding("UTF-8");
+	//파일 업로드 위치
+	String saveFolder="C:\\NCS\\jsp\\workspace(jsp)\\chap09_FileUpload\\WebContent\\upload";
+	//허용 용량 지정
+	int fileSize=5*1024*1024; //최대 파일크기 : 5MB
+	//이진파일 업로드 객체 생성
+	MultipartRequest multi=new MultipartRequest();
+	
+%>

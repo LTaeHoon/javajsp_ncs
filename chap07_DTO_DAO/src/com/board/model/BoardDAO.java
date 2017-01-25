@@ -108,5 +108,46 @@ public class BoardDAO { //db 연동(jdbc+dbcp) 객체 생성
 			  e.printStackTrace(); 
 		   }
 		   
+	   }//method end
+	   
+	   /* 게시물 수정 : 제목, 내용 수정 */
+	   public int board_update(BoardDTO dto){
+		   int re = -1;
+		   sql = "update jsp_board set board_title=?, board_cont=? where board_no=?";
+		   try{
+			   pstmt = con.prepareStatement(sql);
+			   pstmt.setString(1, dto.getBoard_title());
+			   pstmt.setString(2, dto.getBoard_cont());
+			   pstmt.setInt(3, dto.getBoard_no());
+			   re = pstmt.executeUpdate();
+			   pstmt.close();con.close();
+		   }catch(Exception e){
+			   e.printStackTrace();
+		   }
+		   return re;
+	   }
+	   
+	   public int board_delete(int board_no, String pwd){
+		   int re =-1;
+		   sql = "select * from jsp_board where board_no=?";
+		   
+		   try{
+			   pstmt=con.prepareStatement(sql);
+			   pstmt.setInt(1, board_no);
+			   rs=pstmt.executeQuery();
+			   if(rs.next()){
+				  if(pwd.equals(rs.getString("board_pwd"))){
+				   sql ="delete from jsp_board where board_no=?";
+				   pstmt = con.prepareStatement(sql);
+				   pstmt.setInt(1, board_no);
+				   re=pstmt.executeUpdate();
+				  }
+			   }
+			   pstmt.close();rs.close();con.close();
+		   }catch(Exception e){
+			   e.printStackTrace();
+		   }
+		   
+		   return re;
 	   }
 }

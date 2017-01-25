@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>파일 유형 선택(자식창)</title>
+<script type="text/javascript">
+	function select(){ //선택항목 선택 시 호출
+		//자식창에서 선택한 파일 유형
+		var fileType = document.frm2.fileType.value;
+		//부모창으로 파일 유형 넘김
+		opener.document.frm1.fileType.value=fileType;
+		window.close(); //자식창 닫기
+		
+	}
+</script>
+</head>
+<body>
+	<h3> 파일 유형 선택</h3>
+	<form name="frm2">
+		<select name="fileType" onchange="select()">
+			<option value="">## 파일 유형 선택 ##</option>
+			<option value="연습용">연습용</option>
+			<option value="실습용">실습용</option>
+			<option value="교육용">교육용</option>
+		</select>
+	</form>
+</body>
+</html>

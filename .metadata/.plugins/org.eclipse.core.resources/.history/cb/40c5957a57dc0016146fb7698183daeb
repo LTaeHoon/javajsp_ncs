@@ -1,9 +1,0 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!--forwardTest.jsp(2) ->  forwardResult.jsp(2) -> forwardPage.jsp(2) -->
-<h2> 여기는 forwardPage.jsp 페이지</h2>
-<%
-	request.setCharacterEncoding("UTF-8");
-	String id = request.getParameter("id");
-	String hobby = request.getParameter("hobby");
-%>

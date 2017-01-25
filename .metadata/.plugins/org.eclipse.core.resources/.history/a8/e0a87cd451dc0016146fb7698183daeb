@@ -1,5 +1,0 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!--  includePage.jsp  -->
-
-<h2> 여기는 includePage.jsp </h2>

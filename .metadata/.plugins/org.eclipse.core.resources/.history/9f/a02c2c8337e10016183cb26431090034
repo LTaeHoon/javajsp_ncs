@@ -1,0 +1,28 @@
+﻿chap07_DTO_DAO 수업내용
+	-> dbcp + 게시판 시스템(mvc) 작성
+		
+1. DBCP 환경으로 셋팅(chap06_ConnPool)
+	-> 라이브러리 : lib 폴더에 넣기
+	-> db 패키지 생성
+	-> dbcp관련 환경설정 파일(context.xml, web.xml)
+	-> test 폴더 : dbcp 연동 결과 확인
+	
+2. sql 폴더 생성
+	-> jsp_board.sql 작성(table생성)
+	
+3. 게시물 목록보기
+	-> com.board.model
+		-> BoardDTO : table 칼럼
+		-> BoardDAO : db(table) 접근 -> data I/O
+			-> getBoardList() 메서드 작성
+	-> board 폴더
+		-> boardList.jsp(게시물 목록보기)
+
+4. 게시물 글쓰기
+	-> com.board.model
+		-> BoardDAO
+			-> insertBoard() 메서드 작성
+	-> board 폴더
+		-> boardWrite.jsp(게시물 글쓰기 폼)
+		
+		

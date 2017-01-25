@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+ /* 회원 로그인 UI */
+ #login_wrap{
+   width: 250px; /* 폭 픽셀 */
+   height: 200px; /* 높이 픽셀 */
+   /* 가운데 정렬 기능 */
+   margin-left: auto; margin-right: auto;
+   margin-top: 20px;
+   border : 1px solid blue; /* 테두리(굵기,유형,색상)지정*/
+   /* css3 추가 기능 */
+   border-radius : 20px; /* 모서리가 둥근 사각형 */
+   box-shadow : 15px 15px 15px skyblue; /* 그림자 지정*/
+ }
+ #login_wrap .login_title{ /* 제목 스타일 지정 */
+   margin-top: 20px; width: 150px;
+  /* 가운데 정렬 기능 */
+   margin-left: auto; margin-right: auto;  
+   background: skyblue; /* 배경색 */
+   border-radius : 15px; /* 모서리가 둥근 사각형 */
+   text-align: center;   /* 가운데 정렬 */
+   font-size: 20px; /* 글자 크기 */
+ }
+ #login_t{ /* 테이블 영역 디자인 */
+   margin: 30px 0 0 20px; /* 위,오른,아래,왼쪽 */ 
+ }
+ #login_menu{ /*버튼 관련 디자인 */
+   margin: 20px 0 0 40px;
+ }
+ .input_box{ /* 입력상자 디자인 */
+   border-radius : 15px;
+   border : 1px solid blue;
+ }
+ .input_box:hover{ /* 입력상자 포커싱 */
+   background:  #ccc; /* 배경색 */
+ } 
+ .login_b:hover{ /* 버튼에 포커싱 */
+   cursor: hand; cursor: pointer; /* 커서 모양 */
+   border : 1px solid red; /* 테두리 */
+   border-radius : 10px; /* 둥근 사각형 */
+   font-weight: bold;   /* 글꼴 유형(굵게) */
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

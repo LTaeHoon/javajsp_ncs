@@ -1,0 +1,15 @@
+package R;
+
+import org.rosuda.REngine.REXP;
+import org.rosuda.REngine.Rserve.RConnection;
+import org.rosuda.REngine.Rserve.RserveException;
+
+public class Rjava {
+
+	public static void main(String[] args) throws RserveException {
+		// TODO Auto-generated method stub
+		RConnection rcon = new RConnection();
+		REXP x = rcon.eval("104+200");
+	}
+
+}

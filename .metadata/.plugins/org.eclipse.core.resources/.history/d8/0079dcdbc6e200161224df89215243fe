@@ -1,0 +1,54 @@
+package R;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.rosuda.REngine.REXP;
+import org.rosuda.REngine.Rserve.RConnection;
+import org.rosuda.REngine.Rserve.RserveException;
+
+/**
+ * Servlet implementation class RjavaController
+ */
+@WebServlet("/rjava.do")
+public class RjavaController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public RjavaController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		RConnection rcon;
+		try {
+			rcon = new RConnection();
+		} catch (RserveException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // R 연동 객체
+		REXP x;
+		try {
+			x = rcon.eval("104+200");
+		} catch (RserveException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  //R 스크립트 작성
+		int num_x = x.asInteger(); //숫자 형변환
+		System.out.println("num_x :"+num_x);
+		String str_x = x.asString(); // 문자 형변환
+		System.out.println("str_x:"+str_x);
+	}
+
+}
