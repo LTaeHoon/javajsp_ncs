@@ -54,7 +54,8 @@ public class BoardWriteOk extends HttpServlet {
 		if(re>=0){ //레코드 삽입 성공
 			out.println("<script>");
 			out.println("alert('레코드 삽입 성공')");
-			out.println("location.href='board/boardList.jsp'");
+			//out.println("location.href='board/boardList.jsp'"); //ver1
+			response.sendRedirect("list.do"); //ver2
 			out.println("</script>");
 		}else{
 			out.println("<script>");

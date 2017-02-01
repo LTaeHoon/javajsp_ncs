@@ -150,4 +150,64 @@ public class BoardDAO { //db 연동(jdbc+dbcp) 객체 생성
 		   
 		   return re;
 	   }
+	   
+	   /*
+	     * board ver2에서 추가할 메서드(총 레코드 수 , 특정 페이지 게시물 목록) 
+	     */   
+	    
+		/*총 레코드 수*/
+		public int getListCount() {
+	        int count=0;
+	        try{
+	        	//DBConnection db = new DBConnection();
+	            //con = db.con;
+	        	sql="select count(*) from jsp_board";
+	        	pstmt=con.prepareStatement(sql);
+	        	rs=pstmt.executeQuery(); //쿼리문 실행
+	        	if(rs.next()){ //레코드가 있다면
+	        		count=rs.getInt(1); //총 레코드 수 저장
+	        	}
+	        	rs.close(); pstmt.close(); //con.close();
+	        }catch(Exception e){
+	        	e.printStackTrace();
+	        }
+			return count;
+		}
+		
+	    /* 자료실 목록 */
+		public List<BoardDTO> getBoardList(int page, int limit) {
+			List<BoardDTO> boardlist=new ArrayList<BoardDTO>();
+			int start=(page-1)*limit+1; // page 시작행( (1-1)*10+1=1 )
+			int end=page*limit;      // page 끝행( 1*10=10 )
+			// page=1 & limit=10 -> start=1, end=10
+			// page=2 & limit=5  -> start=6, end=10 
+
+			try{
+				// 전체 검색결과를 대상으로 의사컬럼(rownum)을 적용하여 지정한 시작행 ~ 끝행 선택   
+				sql ="select * from (select jsp_board.*, rownum as rnum "
+					 + " from (select * from jsp_board order by board_no desc) jsp_board)" 
+					 + " where rnum >=? and rnum <= ?"; 
+			    
+			    pstmt=con.prepareStatement(sql);
+			    pstmt.setInt(1,start);
+			    pstmt.setInt(2,end); 
+
+			    rs=pstmt.executeQuery();//쿼리문 실행
+			    while(rs.next()){//레코드가 있을동안 반복
+	    		   BoardDTO dto = new BoardDTO();
+	    		   dto.setBoard_no(rs.getInt("board_no"));
+	    		   dto.setBoard_name(rs.getString("board_name"));
+	    		   dto.setBoard_title(rs.getString("board_title"));
+	    		   dto.setBoard_cont(rs.getString("board_cont"));
+	    		   dto.setBoard_pwd(rs.getString("board_pwd"));
+	    		   dto.setBoard_hit(rs.getInt("board_hit"));
+	    		   dto.setBoard_regdate(rs.getString("board_regdate"));
+	    		   boardlist.add(dto);
+			    }
+			    rs.close(); pstmt.close(); //con.close();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+			return boardlist;
+		}
 }
