@@ -1,0 +1,16 @@
+﻿---------------------------------
+1차 MVC(템플릿 및 환경설정)
+---------------------------------
+1. DBCP 환경설정
+2. 7개 라이브러리 넣기
+
+3. final_1차. MVC 템플릿 적용 & 환경설정
+	-> src/WebContent 복사/붙여넣기
+	-> index.jsp 실행
+	
+4. web.xml(FrontController 서블릿 등록)
+	-> mapping.properties 경로 수정
+	->/test.do = jsp/mvctest.jsp
+	
+	->http://localhost:8282/MVC/jsp/mvctest.jsp  //실제 파일
+	->http://localhost:8282/MVC/test.do //가상파일

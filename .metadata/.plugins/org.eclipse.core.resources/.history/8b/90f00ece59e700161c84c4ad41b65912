@@ -1,0 +1,43 @@
+package com.test.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.controller.action.Action;
+import com.controller.action.ActionForward;
+
+public class TestActionOne implements Action {
+
+	/*
+	 * Action 클래스(controller) 생성
+	 * 1. Action 인터페이스를 구현하여 생성
+	 * 2. 전방컨트롤러에 의해서 호출되는 클래스
+	 * 3. ActionForward 리턴 타입 
+	 * 
+	 */
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// 내용 자성
+		//1. key 생성
+		request.setAttribute("NAME","홍길동");
+		request.setAttribute("AGE", 35);
+		
+		//2. view page 포워딩
+		ActionForward forward = new ActionForward();
+		forward.setRedirect(false); //포워딩 방법
+		forward.setPath("jsp/mvcTest.jsp"); //포워딩 경로
+		/*
+		 * ActionForward 리턴 타입
+		 *  1. forward.setRedirect(false)
+		 *   	- jsp 페이지 포워딩 시 사용
+		 *   	- key 전달
+		 *  2. forward.setRedirect(true)
+		 *  	- Action 클래스 포워딩 시 사용
+		 *  	- 변수를 전달하고자 할때 
+		 */
+		
+		return forward;
+		
+	}
+
+}

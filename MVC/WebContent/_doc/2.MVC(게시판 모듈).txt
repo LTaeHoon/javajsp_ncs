@@ -1,0 +1,27 @@
+-----------------------------
+2차. MVC(게시판 모듈)
+-----------------------------
+
+1. WebContent 영역
+   -> board 폴더 추가 
+   -> css/baord.css 추가  
+   -> images/board.png 이미지 추가  
+   -> js/baord.js 추가
+   -> sql폴더 추가/board.sql 테이블 생성  
+
+2. src 영역
+   -> com.baord.action 추가
+   -> com.board.model 추가
+   -> mapping.properties(게시판 액션클래스 내용 추가) 
+
+3. index.jsp 실행 
+   -> 게시판 링크 클릭    
+   -> 내용보기, 조회수, 수정, 삭제 확인 
+
+   
+       
+
+      
+    
+ 
+ 

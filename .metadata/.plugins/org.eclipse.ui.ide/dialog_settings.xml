@@ -12,7 +12,7 @@
 	</section>
 	<section name="org.springsource.ide.eclipse.commons.quicksearch.ui.QuickSearchDialog.DIALOG_SETTINGS">
 		<item value="true" key="CASE_SENSITIVE"/>
-		<item value="forward()" key="LAST_QUERY"/>
+		<item value="${pa" key="LAST_QUERY"/>
 		<list key="SASH_WEIGHTS">
 			<item value="543"/>
 			<item value="456"/>
@@ -26,8 +26,8 @@
 			<item value="741" key="DIALOG_WIDTH"/>
 			<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
-			<item value="591" key="DIALOG_X_ORIGIN"/>
-			<item value="127" key="DIALOG_Y_ORIGIN"/>
+			<item value="346" key="DIALOG_X_ORIGIN"/>
+			<item value="246" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
 </section>

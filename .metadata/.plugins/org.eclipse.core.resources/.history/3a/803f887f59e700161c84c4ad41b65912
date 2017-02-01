@@ -1,0 +1,30 @@
+package com.test.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.controller.action.Action;
+import com.controller.action.ActionForward;
+
+public class TestActionOne implements Action {
+
+	/*
+	 * Action 클래스(controller) 생성
+	 * 1. Action 인터페이스를 구현하여 생성
+	 * 2. 전방컨트롤러에 의해서 호출되는 클래스
+	 * 3. ActionForward 리턴 타입 
+	 * 
+	 */
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// 내용 자성
+		//1. key 생성
+		request.setAttribute("NAME","홍길동");
+		request.setAttribute("AGE", 35);
+		
+		//2. view page 포워딩
+		ActionForward forward = new ActionForward();
+		return null;
+	}
+
+}

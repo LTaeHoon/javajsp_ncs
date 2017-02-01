@@ -1,0 +1,21 @@
+﻿#do 처리 속성 파일
+# 파일 맴핑정보 설정
+#가상주소 = 실제주소(*.jsp)
+/test.do=jsp/mvcTest.jsp
+
+#가상주소 = 실제주소(Action class=controller) 주의사항- 공백없이 입력
+/actionOne.do=execute|com.test.action.TestActionOne
+/actionTwo.do=execute|com.test.action.TestActionTwo
+
+# 게시판 실습
+/form.do = execute|com.board.action.FormAction
+# 게시판 액션클래스
+/board_list.do=execute|com.board.action.BoardListAction
+/board_write.do=execute|com.board.action.BoardWriteAction
+/board_write_ok.do=execute|com.board.action.BoardWriteOkAction
+/board_cont.do=execute|com.board.action.BoardContAction
+/board_edit.do=execute|com.board.action.BoardEditAction
+/board_edit_ok.do=execute|com.board.action.BoardEditOkAction
+/board_del.do=execute|com.board.action.BoardDelAction
+/board_del_ok.do=execute|com.board.action.BoardDelOkAction
+/board_find_ok.do=execute|com.board.action.BoardFindOkAction

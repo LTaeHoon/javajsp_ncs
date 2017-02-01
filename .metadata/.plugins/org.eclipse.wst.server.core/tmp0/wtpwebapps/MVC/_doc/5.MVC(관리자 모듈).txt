@@ -1,0 +1,20 @@
+-----------------------------
+5차. MVC(관리자 모듈)
+-----------------------------
+
+1. WebContent 영역
+   -> admin 폴더 내용 추가 
+   -> css/admin.css 추가  
+   -> include 폴더(관리자용 header 2개 파일 추가)  
+   -> js/admin.js 추가 
+   -> sql/admin.sql table 생성 
+     
+2. src 영역
+   -> com.admin.action 추가
+   -> com.admin.model 추가
+   -> mapping.properties(관리자 액션클래스 내용 추가) 
+
+3. index.jsp 실행 
+   -> 관리자 링크 클릭 -> 목록과 내용 확인
+   -> [회원관리] 링크 클릭 -> 목록/내용/검색/수정/삭제 확인   
+   -> [로그아웃] 링크 클릭 -> 시작 페이지 확인 

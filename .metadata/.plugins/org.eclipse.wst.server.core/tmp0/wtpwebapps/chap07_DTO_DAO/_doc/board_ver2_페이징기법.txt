@@ -1,0 +1,23 @@
+﻿#####################################
+## board ver2(페이징 처리)
+#####################################
+
+1. jsp_board2.sql(upload)
+   -> 레코드 추가, 의사컬럼 설명
+   
+2. 게시판 페이징 ppt 설명   
+
+3. board_ver2 폴더 생성 
+   -> boardWrite.jsp(복사/붙여넣기) 
+   -> boardList.jsp(paging 수정:upload)
+
+4. com.board.model
+   -> BoardDAO(getListCount(), getBoardList() 추가 : upload) 
+
+5. com.board.controller
+   -> BoardListOk.java(upload)    
+   -> BoardWriteOk.java 링크 수정(list.do)
+   
+6.index.jsp 작성 (upload)
+
+

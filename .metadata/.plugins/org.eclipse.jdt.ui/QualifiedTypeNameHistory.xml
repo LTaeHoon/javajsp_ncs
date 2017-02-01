@@ -11,7 +11,6 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="model.CRUD_DTO"/>
 <fullyQualifiedTypeName name="model.CRUD_DAO"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.naming.Context"/>
 <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 <fullyQualifiedTypeName name="javax.sql.DataSource"/>
@@ -22,6 +21,12 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.board.model.BoardDTO"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="com.board.model.BoardDAO"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="product.ProductSearch"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="org.rosuda.REngine.Rserve.RConnection"/>
+<fullyQualifiedTypeName name="org.rosuda.REngine.REXP"/>
+<fullyQualifiedTypeName name="com.controller.action.ActionForward"/>
 </qualifiedTypeNameHistroy>

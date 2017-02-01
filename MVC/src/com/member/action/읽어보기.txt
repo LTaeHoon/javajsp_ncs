@@ -1,0 +1,5 @@
+1. 파일업로드 폴더 생성
+   WebContent/upload
+2. 2진파일 업로드 라이브러리 준비
+   WEB-INF/lib/cos.jar
+3. MemberJoinOkAction 파일업로드 경로 수정

@@ -1,0 +1,7 @@
+﻿#do 처리 속성 파일
+# 파일 맴핑정보 설정
+#가상주소 = 실제주소(*.jsp)
+/test.do=jsp/mvcTest.jsp
+
+#가상주소 = 실제주소(Action class=controller) 주의사항- 공백없이 입력
+/actionOne.do=execute|com.test.action.TestActionOne

@@ -1,0 +1,40 @@
+-----------------------------------
+1차. MVC(환경설정 및 템플릿 테스트)
+-----------------------------------
+
+1. db 패키지/ 커넥션 풀 환경 셋팅 
+2. lib 폴더에 7개 라이브러리 넣기 
+
+3. 1차 템플릿에서 src/WebContent 파일 복사/붙여넣기 
+4. index.jsp 실행/초기화면 확인 
+
+5. 프론트 컨트롤러 서블릿 등록(web.txt 참고)
+6. com.controller.action 패키지의 클래스 역할 설명 
+   -> mapping.properties 용도 설명 
+   -> FrontController.java에서 mapping.properties 경로 수정 
+   
+7. jsp 맵핑 설정 
+   -> jsp 폴더 생성 
+   -> jsp/mvcTest.jsp 작성 
+   -> mapping.properties 파일 맵핑 작성  
+      /test.do=jsp/mvcTest.jsp  
+   -> 1차 실행 : http://localhost:8080/MVC/jsp/mvcTest.jsp 
+   -> 2차 실행(MVC 방식) : http://localhost:8080/MVC/test.do
+ 
+8. Action class 맵핑 설정(실제파일 포워딩) 
+   -> mvcTest.jsp(2차 작성)
+   -> mapping.properties 파일 맵핑 작성  
+      /actionOne.do=execute|com.test.action.TestActionOne
+   -> com.test.action.TestActionOne 작성 (jsp 페이지에 key 포워딩)
+   -> jsp/result.jsp 작성(key 출력)
+   
+9. Action class 맵핑 설정(가상파일 포워딩)  
+   -> jsp/result.jsp(2차 작성)
+   -> mapping.properties 파일 맵핑 작성  
+      /actionTwo.do=execute|com.test.action.TestActionTwo
+   -> com.test.action.TestActionTwo 작성    
+   -> jsp/mvcTest.jsp(3차 작성)    
+      
+    
+ 
+ 

@@ -1,6 +1,0 @@
-package model;
-
-//CRUD : Create,Read,Update,Delete
-public class CRUD_DTO {
-
-}
